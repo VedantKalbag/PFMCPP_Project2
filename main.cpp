@@ -96,8 +96,27 @@ void variableDeclarations()
     unsigned int maxVal = 65535;
     unsigned int minVal = 0;
     unsigned int randomVal = 10002;
+    
 
-    ignoreUnused(randomVal,minVal,maxVal,reset,refresh,isPresent,secondLetter,lastLetter,firstLetter,lastDouble,nextDouble,firstDouble,amplitude,inputVolume,outputGain,negativeNumber,distanceMoved,averageSpeed);
+    ignoreUnused(randomVal, 
+                 minVal, 
+                 maxVal, 
+                 reset, 
+                 refresh, 
+                 isPresent, 
+                 secondLetter, 
+                 lastLetter, 
+                 firstLetter, 
+                 lastDouble, 
+                 nextDouble, 
+                 firstDouble, 
+                 amplitude, 
+                 inputVolume, 
+                 outputGain, 
+                 negativeNumber, 
+                 distanceMoved, 
+                 averageSpeed);
+
 }
 /*
  10 functions
@@ -231,6 +250,7 @@ int main()
 
 
     ignoreUnused(carRented,speed,celsiusTemp,newNumber,negNumber,sum,totalCost,currentState,seconds);
+
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
