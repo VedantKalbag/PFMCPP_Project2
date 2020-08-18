@@ -61,9 +61,8 @@ void variableDeclarations()
     int negativeNumber = -101;
     int distanceMoved = 10;
     int averageSpeed = 40;
-    ignoreUnused(negativeNumber);
-    ignoreUnused(distanceMoved);
-    ignoreUnused(averageSpeed);
+    
+    
     
     
     
@@ -75,41 +74,30 @@ void variableDeclarations()
     float outputGain = 1.0f;
     float inputVolume = 0.5f;
     float amplitude = -0.01f;
-    ignoreUnused(outputGain);
-    ignoreUnused(inputVolume);
-    ignoreUnused(amplitude);
+ 
 
     //double variables
     double firstDouble = 5.03;
     double nextDouble = -0.2901;
     double lastDouble = 9.991;
-    ignoreUnused(firstDouble);
-    ignoreUnused(nextDouble);
-    ignoreUnused(lastDouble);
 
     //char variables
     char firstLetter = 'a';
     char lastLetter = 'z';
     char secondLetter = 'b';
-    ignoreUnused(firstLetter);
-    ignoreUnused(lastLetter);
-    ignoreUnused(secondLetter);
+
     
     //bool variables
     bool isPresent = true;
     bool refresh = false;
     bool reset = true;
-    ignoreUnused(isPresent);
-    ignoreUnused(refresh);
-    ignoreUnused(reset);
 
     //unsigned int
     unsigned int maxVal = 65535;
     unsigned int minVal = 0;
     unsigned int randomVal = 10002;
-    ignoreUnused(maxVal);
-    ignoreUnused(minVal);
-    ignoreUnused(randomVal);
+
+    ignoreUnused(randomVal,minVal,maxVal,reset,refresh,isPresent,secondLetter,lastLetter,firstLetter,lastDouble,nextDouble,firstDouble,amplitude,inputVolume,outputGain,negativeNumber,distanceMoved,averageSpeed);
 }
 /*
  10 functions
