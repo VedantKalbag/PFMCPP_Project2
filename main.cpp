@@ -126,79 +126,78 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
 float calculateSpeed(float distanceTravelled = 20.0f, float timeTaken = 5.0f)
 {
-    return (distanceTravelled/timeTaken);
+    ignoreUnused(distanceTravelled,timeTaken);
+    return {};
 }
 /*
  2)
  */
 float convertToCelsius (float tempInFarenheit = 32.f)
 {
-    float tempInCelsius = (5.f/9.f)*(tempInFarenheit-32);
-    ignoreUnused(tempInCelsius);
-    return (tempInCelsius);
+    ignoreUnused(tempInFarenheit);
+    return {};
 }
 /*
  3)
  */
 int incrementByOne (int number = 0)
 {
-    return (number+1);
+    ignoreUnused(number);
+    return {};
 }
 /*
  4)
  */
 int findNegative (int number)
 {
-    return (number*-1);
+    ignoreUnused(number);
+    return {};
 }
 /*
  5)
  */
 float findSum (float num1, float num2, float num3=0.f, float num4=0.f,float num5=0.f)
 {
-    return (num1 + num2 + num3 + num4 + num5);
+    ignoreUnused(num1,num2,num3,num4,num5);
+    return {};
 }
 /*
  6)
  */
 float calculateCost (int numberOfUnits, float costPerUnit)
 {
-    return (numberOfUnits * costPerUnit);
+    ignoreUnused(numberOfUnits,costPerUnit);
+    return {};
 }
 /*
  7)
  */
 void turnOnLight(int brightness = 5)
 {
-    std::cout << "Light is on at brightness " << brightness <<"\n";
+    ignoreUnused(brightness);
 }
 /*
  8)
  */
 bool heaterOn (int ambientTemp, int setTemp)
 {
-    bool heaterState;
-    if(setTemp > ambientTemp)
-    {heaterState = true;}
-    else
-    {heaterState = false;}
-
-    return (heaterState);
+    ignoreUnused(ambientTemp, setTemp);
+    return {};
 }
 /*
  9)
  */
 float timeInSeconds(int timeInMilliseconds)
 {
-    return(timeInMilliseconds/1000.f);
+    ignoreUnused(timeInMilliseconds);
+    return {};
 }
 /*
  10)
  */
 void assignmentDone(bool isDone)
 {
-    if(isDone)
-    {std::cout<<"Awesome, everything works perfectly\n";}
+    ignoreUnused(isDone);
 }
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -220,49 +219,30 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    std::cout << "Function No. 1\n";
-    float speed = calculateSpeed(100.f, 20.f);
-    std::cout << "Speed =" << speed << "\n\n";
+    
+    auto speed = calculateSpeed(100.f, 20.f);
+    
     //2)
-    std::cout << "Function No. 2\n";
-    float celsiusTemp = convertToCelsius(212.f);
-    std::cout << "Temp in Celsius is " << celsiusTemp << "\n\n";
+    auto celsiusTemp = convertToCelsius(212.f);
     //3)
-    std::cout << "Function No. 3\n";
-    int newNumber = incrementByOne(10);
-    std::cout << "The new number is "
- << newNumber << "\n\n";
+    auto newNumber = incrementByOne(10);
     //4)
-    std::cout << "Function No. 4\n";
-    int negNumber = findNegative(2410);
-    std::cout << "The negative of the number is " << negNumber << "\n\n";
+    auto negNumber = findNegative(2410);
     //5)
-    std::cout << "Function No. 5\n";
     auto sum = findSum(12, 13, 3, 2);
-    std::cout << "The sum is " << sum << "\n\n";
     //6)
-    std::cout << "Function No. 6\n";
     auto totalCost = calculateCost(25, 10.07f);
-    std::cout << "The total cost is " << totalCost << "\n\n";
     //7)
-    std::cout << "Function No. 7\n";
     turnOnLight(10);
-    std::cout << "\n";
     //8)
-    std::cout << "Function No. 8\n";
-    bool currentState = heaterOn(25, 22);
-    std::cout << "The current state of the heater is " << currentState <<"\n\n" ;
+    auto currentState = heaterOn(25, 22);
     //9)
-    std::cout << "Function No. 9\n";
-    float seconds = timeInSeconds(34402);
-    std::cout << "Seconds = " << seconds << "\n\n";
+    auto seconds = timeInSeconds(34402);
     //10)
-    std::cout << "Function No. 10\n";
     assignmentDone(true);
-    std::cout<<"\n";
 
 
-    ignoreUnused(carRented);
+    ignoreUnused(carRented,speed,celsiusTemp,newNumber,negNumber,sum,totalCost,currentState,seconds);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
